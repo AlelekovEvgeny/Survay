@@ -50,10 +50,6 @@ public class Reports {
 	 private static final boolean SurvayClinic = false;
 
 
-	/*
-     * Выргужаем фаил и удаляем с сервака
-     * 
-     */
     
     private void downloadExcel(HttpServletResponse response, String absolutePath) throws IOException 
     {
@@ -108,7 +104,7 @@ public class Reports {
          excelRow = sheet.getRow(0);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Период отчета");
+         excelCell.setCellValue("ГЏГҐГ°ГЁГ®Г¤ Г®ГІГ·ГҐГІГ ");
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
          excelCell.setCellValue(paramonepart.getDatestart());
@@ -122,7 +118,7 @@ public class Reports {
          excelRow = sheet.getRow(1);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Мед огранизация");
+         excelCell.setCellValue("ГЊГҐГ¤ Г®ГЈГ°Г Г­ГЁГ§Г Г¶ГЁГї");
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
          excelCell.setCellValue(paramonepart.getLpu());
@@ -133,7 +129,7 @@ public class Reports {
          excelRow = sheet.getRow(2);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Категории ответов");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГЁ Г®ГІГўГҐГІГ®Гў");
          for(int i=0;i<paramonepart.getMas().size();i++)
          {
         	 excelCell = excelRow.createCell(i+1);
@@ -195,7 +191,7 @@ public class Reports {
          excelRow.setHeight((short) 800);
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Индикатор доступности и качества медицинской помощи");
+         excelCell.setCellValue("Г€Г­Г¤ГЁГЄГ ГІГ®Г° Г¤Г®Г±ГІГіГЇГ­Г®Г±ГІГЁ ГЁ ГЄГ Г·ГҐГ±ГІГўГ  Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ");
          excelCell.setCellStyle(style);
          sheet.addMergedRegion(new CellRangeAddress(5,5,0,15));
          
@@ -208,7 +204,7 @@ public class Reports {
          excelRow.setHeight((short) 1000);
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Вопросы");
+         excelCell.setCellValue("Г‚Г®ГЇГ°Г®Г±Г»");
          titleFont.setFontHeightInPoints((short)15);
          excelCell.setCellStyle(style);
          sheet.addMergedRegion(new CellRangeAddress(6, 7, 0, 0));
@@ -220,79 +216,79 @@ public class Reports {
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("Категория респонденты мужчины 18-59лет");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¬ГіГ¦Г·ГЁГ­Г» 18-59Г«ГҐГІ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(2);
          excelCell = excelRow.getCell(2);
-         excelCell.setCellValue("Категория респонденты женщины 18-54 лет");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¦ГҐГ­Г№ГЁГ­Г» 18-54 Г«ГҐГІ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(3);
          excelCell = excelRow.getCell(3);
-         excelCell.setCellValue("Категория респонденты мужчины 60 лет и старше");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¬ГіГ¦Г·ГЁГ­Г» 60 Г«ГҐГІ ГЁ Г±ГІГ Г°ГёГҐ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(4);
          excelCell = excelRow.getCell(4);
-         excelCell.setCellValue("Категория респонденты женщины 55 лет и старше");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¦ГҐГ­Г№ГЁГ­Г» 55 Г«ГҐГІ ГЁ Г±ГІГ Г°ГёГҐ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(5);
          excelCell = excelRow.getCell(5);
-         excelCell.setCellValue("Итого сумма");
+         excelCell.setCellValue("Г€ГІГ®ГЈГ® Г±ГіГ¬Г¬Г ");
          excelCell.setCellStyle(style2);
          
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(6);
          excelCell = excelRow.getCell(6);
-         excelCell.setCellValue("Категория респонденты мужчины 18-59лет");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¬ГіГ¦Г·ГЁГ­Г» 18-59Г«ГҐГІ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(7);
          excelCell = excelRow.getCell(7);
-         excelCell.setCellValue("Категория респонденты женщины 18-54 лет");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¦ГҐГ­Г№ГЁГ­Г» 18-54 Г«ГҐГІ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(8);
          excelCell = excelRow.getCell(8);
-         excelCell.setCellValue("Категория респонденты мужчины 60 лет и старше");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¬ГіГ¦Г·ГЁГ­Г» 60 Г«ГҐГІ ГЁ Г±ГІГ Г°ГёГҐ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(9);
          excelCell = excelRow.getCell(9);
-         excelCell.setCellValue("Категория респонденты женщины 55 лет и старше");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¦ГҐГ­Г№ГЁГ­Г» 55 Г«ГҐГІ ГЁ Г±ГІГ Г°ГёГҐ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
-         excelCell.setCellValue("Итого сумма");
+         excelCell.setCellValue("Г€ГІГ®ГЈГ® Г±ГіГ¬Г¬Г ");
          excelCell.setCellStyle(style2);
          
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(11);
          excelCell = excelRow.getCell(11);
-         excelCell.setCellValue("Категория респонденты мужчины 18-59лет");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¬ГіГ¦Г·ГЁГ­Г» 18-59Г«ГҐГІ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(12);
          excelCell = excelRow.getCell(12);
-         excelCell.setCellValue("Категория респонденты женщины 18-54 лет");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¦ГҐГ­Г№ГЁГ­Г» 18-54 Г«ГҐГІ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(13);
          excelCell = excelRow.getCell(13);
-         excelCell.setCellValue("Категория респонденты мужчины 60 лет и старше");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¬ГіГ¦Г·ГЁГ­Г» 60 Г«ГҐГІ ГЁ Г±ГІГ Г°ГёГҐ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(14);
          excelCell = excelRow.getCell(14);
-         excelCell.setCellValue("Категория респонденты женщины 55 лет и старше");
+         excelCell.setCellValue("ГЉГ ГІГҐГЈГ®Г°ГЁГї Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ» Г¦ГҐГ­Г№ГЁГ­Г» 55 Г«ГҐГІ ГЁ Г±ГІГ Г°ГёГҐ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
-         excelCell.setCellValue("Итого сумма");
+         excelCell.setCellValue("Г€ГІГ®ГЈГ® Г±ГіГ¬Г¬Г ");
          excelCell.setCellStyle(style2);
 
 
@@ -305,21 +301,21 @@ public class Reports {
          excelRow.setHeight((short) 400);
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("Амбулаторно-поликлиническая помощь");
+         excelCell.setCellValue("ГЂГ¬ГЎГіГ«Г ГІГ®Г°Г­Г®-ГЇГ®Г«ГЁГЄГ«ГЁГ­ГЁГ·ГҐГ±ГЄГ Гї ГЇГ®Г¬Г®Г№Гј");
          excelCell.setCellStyle(style3);
          sheet.addMergedRegion(new CellRangeAddress(7,7,1,5));
          
          excelRow = sheet.getRow(7);
          excelCell = excelRow.createCell(6);
          excelCell = excelRow.getCell(6);
-         excelCell.setCellValue("Дневной стационар");
+         excelCell.setCellValue("Г„Г­ГҐГўГ­Г®Г© Г±ГІГ Г¶ГЁГ®Г­Г Г°");
          excelCell.setCellStyle(style3);
          sheet.addMergedRegion(new CellRangeAddress(7,7,6,10));
          
          excelRow = sheet.getRow(7);
          excelCell = excelRow.createCell(11);
          excelCell = excelRow.getCell(11);
-         excelCell.setCellValue("Стационарная помощь");
+         excelCell.setCellValue("Г‘ГІГ Г¶ГЁГ®Г­Г Г°Г­Г Гї ГЇГ®Г¬Г®Г№Гј");
          excelCell.setCellStyle(style3);
          sheet.addMergedRegion(new CellRangeAddress(7,7,11,15));
          
@@ -339,9 +335,9 @@ public class Reports {
          /*
           * Data 
           */
-         // ПОЛИКЛИНИКА
+         // ГЏГЋГ‹Г€ГЉГ‹Г€ГЌГ€ГЉГЂ
          
-         // Организацией записи на прием к врачу
+         // ГЋГ°ГЈГ Г­ГЁГ§Г Г¶ГЁГҐГ© Г§Г ГЇГЁГ±ГЁ Г­Г  ГЇГ°ГЁГҐГ¬ ГЄ ГўГ°Г Г·Гі
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(8);	
@@ -350,14 +346,14 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic1(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         //  СУММА Организацией записи на прием к врачу
+         //  Г‘Г“ГЊГЊГЂ ГЋГ°ГЈГ Г­ГЁГ§Г Г¶ГЁГҐГ© Г§Г ГЇГЁГ±ГЁ Г­Г  ГЇГ°ГЁГҐГ¬ ГЄ ГўГ°Г Г·Гі
         	 excelRow = sheet.getRow(8);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic1summ(forOneOrgClinic,paramonepart.getMas()));
          
          
-         // Временем ожидания приема врача
+         // Г‚Г°ГҐГ¬ГҐГ­ГҐГ¬ Г®Г¦ГЁГ¤Г Г­ГЁГї ГЇГ°ГЁГҐГ¬Г  ГўГ°Г Г·Г 
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(9);	
@@ -366,13 +362,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic2(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Временем ожидания приема врача
+         // Г‘Г“ГЊГЊГЂ Г‚Г°ГҐГ¬ГҐГ­ГҐГ¬ Г®Г¦ГЁГ¤Г Г­ГЁГї ГЇГ°ГЁГҐГ¬Г  ГўГ°Г Г·Г 
         	 excelRow = sheet.getRow(9);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic2summ(forOneOrgClinic,paramonepart.getMas()));
          
-         // Сроками ожидания медицинских услуг после записи
+         // Г‘Г°Г®ГЄГ Г¬ГЁ Г®Г¦ГЁГ¤Г Г­ГЁГї Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГµ ГіГ±Г«ГіГЈ ГЇГ®Г±Г«ГҐ Г§Г ГЇГЁГ±ГЁ
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(10);	
@@ -381,13 +377,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic3(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Сроками ожидания медицинских услуг после записи
+         // Г‘Г“ГЊГЊГЂ Г‘Г°Г®ГЄГ Г¬ГЁ Г®Г¦ГЁГ¤Г Г­ГЁГї Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГµ ГіГ±Г«ГіГЈ ГЇГ®Г±Г«ГҐ Г§Г ГЇГЁГ±ГЁ
         	 excelRow = sheet.getRow(10);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic3summ(forOneOrgClinic,paramonepart.getMas()));
          
-         // Доступностью необходимых лабораторных исследований/анализов
+         // Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г­ГҐГ®ГЎГµГ®Г¤ГЁГ¬Г»Гµ Г«Г ГЎГ®Г°Г ГІГ®Г°Г­Г»Гµ ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГ©/Г Г­Г Г«ГЁГ§Г®Гў
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(11);	
@@ -396,14 +392,14 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic4(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Доступностью необходимых лабораторных исследований/анализов
+         // Г‘Г“ГЊГЊГЂ Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г­ГҐГ®ГЎГµГ®Г¤ГЁГ¬Г»Гµ Г«Г ГЎГ®Г°Г ГІГ®Г°Г­Г»Гµ ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГ©/Г Г­Г Г«ГЁГ§Г®Гў
         	 excelRow = sheet.getRow(11);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic4summ(forOneOrgClinic,paramonepart.getMas()));
 
  	   
-         // Доступностью диагностических исследований (ЭКГ, УЗИ и т.д.)
+         // Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г¤ГЁГ ГЈГ­Г®Г±ГІГЁГ·ГҐГ±ГЄГЁГµ ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГ© (ГќГЉГѓ, Г“Г‡Г€ ГЁ ГІ.Г¤.)
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(12);	
@@ -412,13 +408,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic5(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Доступностью диагностических исследований (ЭКГ, УЗИ и т.д.)
+         // Г‘Г“ГЊГЊГЂ Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г¤ГЁГ ГЈГ­Г®Г±ГІГЁГ·ГҐГ±ГЄГЁГµ ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГ© (ГќГЉГѓ, Г“Г‡Г€ ГЁ ГІ.Г¤.)
         	 excelRow = sheet.getRow(12);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic5summ(forOneOrgClinic,paramonepart.getMas()));
          
-         // Доступностью мед.помощи терапевтов
+         // Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г¬ГҐГ¤.ГЇГ®Г¬Г®Г№ГЁ ГІГҐГ°Г ГЇГҐГўГІГ®Гў
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(13);	
@@ -427,13 +423,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic6(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Доступностью мед.помощи терапевтов
+         // Г‘Г“ГЊГЊГЂ Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г¬ГҐГ¤.ГЇГ®Г¬Г®Г№ГЁ ГІГҐГ°Г ГЇГҐГўГІГ®Гў
         	 excelRow = sheet.getRow(13);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic6summ(forOneOrgClinic,paramonepart.getMas()));
          
-         // Доступностью мед.помощи врачей-специалистов
+         // Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г¬ГҐГ¤.ГЇГ®Г¬Г®Г№ГЁ ГўГ°Г Г·ГҐГ©-Г±ГЇГҐГ¶ГЁГ Г«ГЁГ±ГІГ®Гў
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(14);	
@@ -442,13 +438,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic7(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Доступностью мед.помощи врачей-специалистов
+         // Г‘Г“ГЊГЊГЂ Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г¬ГҐГ¤.ГЇГ®Г¬Г®Г№ГЁ ГўГ°Г Г·ГҐГ©-Г±ГЇГҐГ¶ГЁГ Г«ГЁГ±ГІГ®Гў
         	 excelRow = sheet.getRow(14);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic7summ(forOneOrgClinic,paramonepart.getMas()));
          
-         // Работой врачей в поликлинике
+         // ГђГ ГЎГ®ГІГ®Г© ГўГ°Г Г·ГҐГ© Гў ГЇГ®Г«ГЁГЄГ«ГЁГ­ГЁГЄГҐ
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(15);	
@@ -457,13 +453,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic8(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         //СУММА Работой врачей в поликлинике
+         //Г‘Г“ГЊГЊГЂ ГђГ ГЎГ®ГІГ®Г© ГўГ°Г Г·ГҐГ© Гў ГЇГ®Г«ГЁГЄГ«ГЁГ­ГЁГЄГҐ
         	 excelRow = sheet.getRow(15);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic8summ(forOneOrgClinic,paramonepart.getMas()));
          
-         // Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // ГЌГ Г±ГЄГ®Г«ГјГЄГ® Г‚Г» ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ ГЎГҐГ±ГЇГ«Г ГІГ­Г®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(16);	
@@ -472,13 +468,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic9(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // Г‘Г“ГЊГЊГЂ ГЌГ Г±ГЄГ®Г«ГјГЄГ® Г‚Г» ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ ГЎГҐГ±ГЇГ«Г ГІГ­Г®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ
         	 excelRow = sheet.getRow(16);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic9summ(forOneOrgClinic,paramonepart.getMas()));
          
-         // Техническим состоянием, ремонтом помещений, площадью помещений
+         // Г’ГҐГµГ­ГЁГ·ГҐГ±ГЄГЁГ¬ Г±Г®Г±ГІГ®ГїГ­ГЁГҐГ¬, Г°ГҐГ¬Г®Г­ГІГ®Г¬ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©, ГЇГ«Г®Г№Г Г¤ГјГѕ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(17);	
@@ -487,13 +483,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic10(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Техническим состоянием, ремонтом помещений, площадью помещений
+         // Г‘Г“ГЊГЊГЂ Г’ГҐГµГ­ГЁГ·ГҐГ±ГЄГЁГ¬ Г±Г®Г±ГІГ®ГїГ­ГЁГҐГ¬, Г°ГҐГ¬Г®Г­ГІГ®Г¬ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©, ГЇГ«Г®Г№Г Г¤ГјГѕ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©
         	 excelRow = sheet.getRow(17);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic10summ(forOneOrgClinic,paramonepart.getMas()));
          
-         // Оснащенностью современным медицинским оборудованием
+         // ГЋГ±Г­Г Г№ГҐГ­Г­Г®Г±ГІГјГѕ Г±Г®ГўГ°ГҐГ¬ГҐГ­Г­Г»Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГ¬ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГҐГ¬
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(18);	
@@ -502,13 +498,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic11(forOneOrgClinic.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Оснащенностью современным медицинским оборудованием
+         // Г‘Г“ГЊГЊГЂ ГЋГ±Г­Г Г№ГҐГ­Г­Г®Г±ГІГјГѕ Г±Г®ГўГ°ГҐГ¬ГҐГ­Г­Г»Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГ¬ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГҐГ¬
         	 excelRow = sheet.getRow(18);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic11summ(forOneOrgClinic,paramonepart.getMas()));
          
-         // количество опрошенных респондентов
+         // ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ®Гў
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(19);	
@@ -517,17 +513,17 @@ public class Reports {
              excelCell.setCellValue(forOneOrgClinic.get(i).size());
          }
 
-         // СУММА количество опрошенных респондентов
+         // Г‘Г“ГЊГЊГЂ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ®Гў
         	 excelRow = sheet.getRow(19);	
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
              excelCell.setCellValue(countonquestionClinic12(forOneOrgClinic));
          
          /*
-          * Дневной стационар
+          * Г„Г­ГҐГўГ­Г®Г© Г±ГІГ Г¶ГЁГ®Г­Г Г°
           */
              
-         // Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // ГЌГ Г±ГЄГ®Г«ГјГЄГ® Г‚Г» ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ ГЎГҐГ±ГЇГ«Г ГІГ­Г®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(16);	
@@ -536,13 +532,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionDC1(forOneOrgDayStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // Г‘Г“ГЊГЊГЂ ГЌГ Г±ГЄГ®Г«ГјГЄГ® Г‚Г» ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ ГЎГҐГ±ГЇГ«Г ГІГ­Г®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ
     	 excelRow = sheet.getRow(16);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
          excelCell.setCellValue(countonquestionDC1summ(forOneOrgDayStac,paramonepart.getMas()));
          
-         // Техническим состоянием, ремонтом помещений, площадью помещений
+         // Г’ГҐГµГ­ГЁГ·ГҐГ±ГЄГЁГ¬ Г±Г®Г±ГІГ®ГїГ­ГЁГҐГ¬, Г°ГҐГ¬Г®Г­ГІГ®Г¬ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©, ГЇГ«Г®Г№Г Г¤ГјГѕ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(17);	
@@ -551,13 +547,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionDC2(forOneOrgDayStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Техническим состоянием, ремонтом помещений, площадью помещений
+         // Г‘Г“ГЊГЊГЂ Г’ГҐГµГ­ГЁГ·ГҐГ±ГЄГЁГ¬ Г±Г®Г±ГІГ®ГїГ­ГЁГҐГ¬, Г°ГҐГ¬Г®Г­ГІГ®Г¬ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©, ГЇГ«Г®Г№Г Г¤ГјГѕ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©
     	 excelRow = sheet.getRow(17);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
          excelCell.setCellValue(countonquestionDC2summ(forOneOrgDayStac,paramonepart.getMas()));
          
-         // Оснащенностью современным медицинским оборудованием
+         // ГЋГ±Г­Г Г№ГҐГ­Г­Г®Г±ГІГјГѕ Г±Г®ГўГ°ГҐГ¬ГҐГ­Г­Г»Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГ¬ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГҐГ¬
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(18);	
@@ -566,13 +562,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionDC3(forOneOrgDayStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Оснащенностью современным медицинским оборудованием
+         // Г‘Г“ГЊГЊГЂ ГЋГ±Г­Г Г№ГҐГ­Г­Г®Г±ГІГјГѕ Г±Г®ГўГ°ГҐГ¬ГҐГ­Г­Г»Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГ¬ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГҐГ¬
     	 excelRow = sheet.getRow(18);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
          excelCell.setCellValue(countonquestionDC3summ(forOneOrgDayStac,paramonepart.getMas()));
          
-         // Комфортностью больничной палаты и мест пребывания пациентов
+         // ГЉГ®Г¬ГґГ®Г°ГІГ­Г®Г±ГІГјГѕ ГЎГ®Г«ГјГ­ГЁГ·Г­Г®Г© ГЇГ Г«Г ГІГ» ГЁ Г¬ГҐГ±ГІ ГЇГ°ГҐГЎГ»ГўГ Г­ГЁГї ГЇГ Г¶ГЁГҐГ­ГІГ®Гў
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(21);	
@@ -581,13 +577,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionDC4(forOneOrgDayStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Комфортностью больничной палаты и мест пребывания пациентов
+         // Г‘Г“ГЊГЊГЂ ГЉГ®Г¬ГґГ®Г°ГІГ­Г®Г±ГІГјГѕ ГЎГ®Г«ГјГ­ГЁГ·Г­Г®Г© ГЇГ Г«Г ГІГ» ГЁ Г¬ГҐГ±ГІ ГЇГ°ГҐГЎГ»ГўГ Г­ГЁГї ГЇГ Г¶ГЁГҐГ­ГІГ®Гў
     	 excelRow = sheet.getRow(21);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
          excelCell.setCellValue(countonquestionDC4summ(forOneOrgDayStac,paramonepart.getMas()));
          
-         // Комплексом предоставляемых медицинских услуг
+         // ГЉГ®Г¬ГЇГ«ГҐГЄГ±Г®Г¬ ГЇГ°ГҐГ¤Г®Г±ГІГ ГўГ«ГїГҐГ¬Г»Гµ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГµ ГіГ±Г«ГіГЈ
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(22);	
@@ -596,13 +592,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionDC5(forOneOrgDayStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Комплексом предоставляемых медицинских услуг
+         // Г‘Г“ГЊГЊГЂ ГЉГ®Г¬ГЇГ«ГҐГЄГ±Г®Г¬ ГЇГ°ГҐГ¤Г®Г±ГІГ ГўГ«ГїГҐГ¬Г»Гµ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГµ ГіГ±Г«ГіГЈ
     	 excelRow = sheet.getRow(22);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
          excelCell.setCellValue(countonquestionDC5summ(forOneOrgDayStac,paramonepart.getMas()));
          
-         // Работой вспомогательных служб (лаборатория, рентген-кабинет, физиотерапевтический кабинет и т.д.
+         // ГђГ ГЎГ®ГІГ®Г© ГўГ±ГЇГ®Г¬Г®ГЈГ ГІГҐГ«ГјГ­Г»Гµ Г±Г«ГіГ¦ГЎ (Г«Г ГЎГ®Г°Г ГІГ®Г°ГЁГї, Г°ГҐГ­ГІГЈГҐГ­-ГЄГ ГЎГЁГ­ГҐГІ, ГґГЁГ§ГЁГ®ГІГҐГ°Г ГЇГҐГўГІГЁГ·ГҐГ±ГЄГЁГ© ГЄГ ГЎГЁГ­ГҐГІ ГЁ ГІ.Г¤.
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(23);	
@@ -611,13 +607,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionDC6(forOneOrgDayStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Работой вспомогательных служб (лаборатория, рентген-кабинет, физиотерапевтический кабинет и т.д.
+         // Г‘Г“ГЊГЊГЂ ГђГ ГЎГ®ГІГ®Г© ГўГ±ГЇГ®Г¬Г®ГЈГ ГІГҐГ«ГјГ­Г»Гµ Г±Г«ГіГ¦ГЎ (Г«Г ГЎГ®Г°Г ГІГ®Г°ГЁГї, Г°ГҐГ­ГІГЈГҐГ­-ГЄГ ГЎГЁГ­ГҐГІ, ГґГЁГ§ГЁГ®ГІГҐГ°Г ГЇГҐГўГІГЁГ·ГҐГ±ГЄГЁГ© ГЄГ ГЎГЁГ­ГҐГІ ГЁ ГІ.Г¤.
     	 excelRow = sheet.getRow(23);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
          excelCell.setCellValue(countonquestionDC6summ(forOneOrgDayStac,paramonepart.getMas()));
          
-         // Обеспеченностью медикаментами и расходными материалами
+         // ГЋГЎГҐГ±ГЇГҐГ·ГҐГ­Г­Г®Г±ГІГјГѕ Г¬ГҐГ¤ГЁГЄГ Г¬ГҐГ­ГІГ Г¬ГЁ ГЁ Г°Г Г±ГµГ®Г¤Г­Г»Г¬ГЁ Г¬Г ГІГҐГ°ГЁГ Г«Г Г¬ГЁ
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(24);	
@@ -626,13 +622,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionDC7(forOneOrgDayStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Обеспеченностью медикаментами и расходными материалами
+         // Г‘Г“ГЊГЊГЂ ГЋГЎГҐГ±ГЇГҐГ·ГҐГ­Г­Г®Г±ГІГјГѕ Г¬ГҐГ¤ГЁГЄГ Г¬ГҐГ­ГІГ Г¬ГЁ ГЁ Г°Г Г±ГµГ®Г¤Г­Г»Г¬ГЁ Г¬Г ГІГҐГ°ГЁГ Г«Г Г¬ГЁ
     	 excelRow = sheet.getRow(24);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
          excelCell.setCellValue(countonquestionDC7summ(forOneOrgDayStac,paramonepart.getMas()));
          
-         // Работой лечащего врача
+         // ГђГ ГЎГ®ГІГ®Г© Г«ГҐГ·Г Г№ГҐГЈГ® ГўГ°Г Г·Г 
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(25);	
@@ -641,13 +637,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionDC8(forOneOrgDayStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Работой лечащего врача
+         // Г‘Г“ГЊГЊГЂ ГђГ ГЎГ®ГІГ®Г© Г«ГҐГ·Г Г№ГҐГЈГ® ГўГ°Г Г·Г 
     	 excelRow = sheet.getRow(25);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
          excelCell.setCellValue(countonquestionDC8summ(forOneOrgDayStac,paramonepart.getMas()));
          
-         // количество опрошенных респондентов
+         // ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ®Гў
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(26);	
@@ -656,17 +652,17 @@ public class Reports {
              excelCell.setCellValue(forOneOrgDayStac.get(i).size());
          }
          
-         // СУММА количество опрошенных респондентов
+         // Г‘Г“ГЊГЊГЂ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ®Гў
     	 excelRow = sheet.getRow(26);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
          excelCell.setCellValue(countonquestionDC9(forOneOrgDayStac));
          
          /*
-          * Стационарная помощь
+          * Г‘ГІГ Г¶ГЁГ®Г­Г Г°Г­Г Гї ГЇГ®Г¬Г®Г№Гј
           */
              
-         // Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // ГЌГ Г±ГЄГ®Г«ГјГЄГ® Г‚Г» ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ ГЎГҐГ±ГЇГ«Г ГІГ­Г®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(16);	
@@ -675,13 +671,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionStac1(forOneOrgStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // Г‘Г“ГЊГЊГЂ ГЌГ Г±ГЄГ®Г«ГјГЄГ® Г‚Г» ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ ГЎГҐГ±ГЇГ«Г ГІГ­Г®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ
     	 excelRow = sheet.getRow(16);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
          excelCell.setCellValue(countonquestionStac1summ(forOneOrgStac,paramonepart.getMas()));
          
-         // Техническим состоянием, ремонтом помещений, площадью помещений
+         // Г’ГҐГµГ­ГЁГ·ГҐГ±ГЄГЁГ¬ Г±Г®Г±ГІГ®ГїГ­ГЁГҐГ¬, Г°ГҐГ¬Г®Г­ГІГ®Г¬ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©, ГЇГ«Г®Г№Г Г¤ГјГѕ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(17);	
@@ -690,13 +686,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionStac2(forOneOrgStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Техническим состоянием, ремонтом помещений, площадью помещений
+         // Г‘Г“ГЊГЊГЂ Г’ГҐГµГ­ГЁГ·ГҐГ±ГЄГЁГ¬ Г±Г®Г±ГІГ®ГїГ­ГЁГҐГ¬, Г°ГҐГ¬Г®Г­ГІГ®Г¬ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©, ГЇГ«Г®Г№Г Г¤ГјГѕ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©
     	 excelRow = sheet.getRow(17);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
          excelCell.setCellValue(countonquestionStac2summ(forOneOrgStac,paramonepart.getMas()));         
          
-         // Оснащенностью современным медицинским оборудованием
+         // ГЋГ±Г­Г Г№ГҐГ­Г­Г®Г±ГІГјГѕ Г±Г®ГўГ°ГҐГ¬ГҐГ­Г­Г»Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГ¬ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГҐГ¬
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(18);	
@@ -705,13 +701,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionStac3(forOneOrgStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Оснащенностью современным медицинским оборудованием
+         // Г‘Г“ГЊГЊГЂ ГЋГ±Г­Г Г№ГҐГ­Г­Г®Г±ГІГјГѕ Г±Г®ГўГ°ГҐГ¬ГҐГ­Г­Г»Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГ¬ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГҐГ¬
     	 excelRow = sheet.getRow(18);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
          excelCell.setCellValue(countonquestionStac3summ(forOneOrgStac,paramonepart.getMas()));
          
-         // Работой вспомогательных служб (лаборатория, рентген-кабинет, физиотерапевтический кабинет и т.д.
+         // ГђГ ГЎГ®ГІГ®Г© ГўГ±ГЇГ®Г¬Г®ГЈГ ГІГҐГ«ГјГ­Г»Гµ Г±Г«ГіГ¦ГЎ (Г«Г ГЎГ®Г°Г ГІГ®Г°ГЁГї, Г°ГҐГ­ГІГЈГҐГ­-ГЄГ ГЎГЁГ­ГҐГІ, ГґГЁГ§ГЁГ®ГІГҐГ°Г ГЇГҐГўГІГЁГ·ГҐГ±ГЄГЁГ© ГЄГ ГЎГЁГ­ГҐГІ ГЁ ГІ.Г¤.
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(23);	
@@ -720,13 +716,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionStac4(forOneOrgStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Работой вспомогательных служб (лаборатория, рентген-кабинет, физиотерапевтический кабинет и т.д.
+         // Г‘Г“ГЊГЊГЂ ГђГ ГЎГ®ГІГ®Г© ГўГ±ГЇГ®Г¬Г®ГЈГ ГІГҐГ«ГјГ­Г»Гµ Г±Г«ГіГ¦ГЎ (Г«Г ГЎГ®Г°Г ГІГ®Г°ГЁГї, Г°ГҐГ­ГІГЈГҐГ­-ГЄГ ГЎГЁГ­ГҐГІ, ГґГЁГ§ГЁГ®ГІГҐГ°Г ГЇГҐГўГІГЁГ·ГҐГ±ГЄГЁГ© ГЄГ ГЎГЁГ­ГҐГІ ГЁ ГІ.Г¤.
     	 excelRow = sheet.getRow(23);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
          excelCell.setCellValue(countonquestionStac4summ(forOneOrgStac,paramonepart.getMas()));
          
-         // Обеспеченностью медикаментами и расходными материалами
+         // ГЋГЎГҐГ±ГЇГҐГ·ГҐГ­Г­Г®Г±ГІГјГѕ Г¬ГҐГ¤ГЁГЄГ Г¬ГҐГ­ГІГ Г¬ГЁ ГЁ Г°Г Г±ГµГ®Г¤Г­Г»Г¬ГЁ Г¬Г ГІГҐГ°ГЁГ Г«Г Г¬ГЁ
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(24);	
@@ -735,13 +731,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionStac5(forOneOrgStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Обеспеченностью медикаментами и расходными материалами
+         // Г‘Г“ГЊГЊГЂ ГЋГЎГҐГ±ГЇГҐГ·ГҐГ­Г­Г®Г±ГІГјГѕ Г¬ГҐГ¤ГЁГЄГ Г¬ГҐГ­ГІГ Г¬ГЁ ГЁ Г°Г Г±ГµГ®Г¤Г­Г»Г¬ГЁ Г¬Г ГІГҐГ°ГЁГ Г«Г Г¬ГЁ
     	 excelRow = sheet.getRow(24);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
          excelCell.setCellValue(countonquestionStac5summ(forOneOrgStac,paramonepart.getMas()));
          
-         // Работой лечащего врача
+         // ГђГ ГЎГ®ГІГ®Г© Г«ГҐГ·Г Г№ГҐГЈГ® ГўГ°Г Г·Г 
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(25);	
@@ -750,13 +746,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionStac6(forOneOrgStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Работой лечащего врача
+         // Г‘Г“ГЊГЊГЂ ГђГ ГЎГ®ГІГ®Г© Г«ГҐГ·Г Г№ГҐГЈГ® ГўГ°Г Г·Г 
     	 excelRow = sheet.getRow(25);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
          excelCell.setCellValue(countonquestionStac6summ(forOneOrgStac,paramonepart.getMas()));
          
-         // Комфортностью больничной палаты и мест пребывания пациентов
+         // ГЉГ®Г¬ГґГ®Г°ГІГ­Г®Г±ГІГјГѕ ГЎГ®Г«ГјГ­ГЁГ·Г­Г®Г© ГЇГ Г«Г ГІГ» ГЁ Г¬ГҐГ±ГІ ГЇГ°ГҐГЎГ»ГўГ Г­ГЁГї ГЇГ Г¶ГЁГҐГ­ГІГ®Гў
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(28);	
@@ -765,13 +761,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionStac7(forOneOrgStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Комфортностью больничной палаты и мест пребывания пациентов
+         // Г‘Г“ГЊГЊГЂ ГЉГ®Г¬ГґГ®Г°ГІГ­Г®Г±ГІГјГѕ ГЎГ®Г«ГјГ­ГЁГ·Г­Г®Г© ГЇГ Г«Г ГІГ» ГЁ Г¬ГҐГ±ГІ ГЇГ°ГҐГЎГ»ГўГ Г­ГЁГї ГЇГ Г¶ГЁГҐГ­ГІГ®Гў
     	 excelRow = sheet.getRow(28);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
          excelCell.setCellValue(countonquestionStac7summ(forOneOrgStac,paramonepart.getMas()));
          
-         // Питание
+         // ГЏГЁГІГ Г­ГЁГҐ
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(29);	
@@ -780,13 +776,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionStac8(forOneOrgStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Питание
+         // Г‘Г“ГЊГЊГЂ ГЏГЁГІГ Г­ГЁГҐ
     	 excelRow = sheet.getRow(29);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
          excelCell.setCellValue(countonquestionStac8summ(forOneOrgStac,paramonepart.getMas()));
          
-         //Сроками ожидания плановой госпитализации
+         //Г‘Г°Г®ГЄГ Г¬ГЁ Г®Г¦ГЁГ¤Г Г­ГЁГї ГЇГ«Г Г­Г®ГўГ®Г© ГЈГ®Г±ГЇГЁГІГ Г«ГЁГ§Г Г¶ГЁГЁ
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(30);	
@@ -795,13 +791,13 @@ public class Reports {
              excelCell.setCellValue(countonquestionStac9(forOneOrgStac.get(i),paramonepart.getMas()));
          }
          
-         // СУММА Сроками ожидания плановой госпитализации
+         // Г‘Г“ГЊГЊГЂ Г‘Г°Г®ГЄГ Г¬ГЁ Г®Г¦ГЁГ¤Г Г­ГЁГї ГЇГ«Г Г­Г®ГўГ®Г© ГЈГ®Г±ГЇГЁГІГ Г«ГЁГ§Г Г¶ГЁГЁ
     	 excelRow = sheet.getRow(30);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
          excelCell.setCellValue(countonquestionStac9summ(forOneOrgStac,paramonepart.getMas()));
          
-         // количество опрошенных респондентов
+         // ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ®Гў
          for(int i=0; i<4;i++)
          {
         	 excelRow = sheet.getRow(31);	
@@ -810,14 +806,14 @@ public class Reports {
              excelCell.setCellValue(forOneOrgStac.get(i).size());
          }
          
-         // СУММА количество опрошенных респондентов
+         // Г‘Г“ГЊГЊГЂ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ®Гў
     	 excelRow = sheet.getRow(31);	
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
          excelCell.setCellValue(countonquestionStac10(forOneOrgStac));
 
          
-         sheet = wb.createSheet("Опрошенные ЛПУ");
+         sheet = wb.createSheet("ГЋГЇГ°Г®ГёГҐГ­Г­Г»ГҐ Г‹ГЏГ“");
          
          Set<String> hSetOneOrgClinic = new HashSet<String>();
          Set<String> hSetOneDayStac = new HashSet<String>();
@@ -825,7 +821,7 @@ public class Reports {
          
          CellRangeAddress adr;
          
-         //========================================================ВТОРОЙ ЛИСТ 'ОПРОШЕННЫЕ ЛПУ'=========================================================================================
+         //========================================================Г‚Г’ГЋГђГЋГ‰ Г‹Г€Г‘Г’ 'ГЋГЏГђГЋГГ…ГЌГЌГ›Г… Г‹ГЏГ“'=========================================================================================
          
          Map<String, List<SurvayClinic>> countOnMO = new HashMap<String, List<SurvayClinic>>();
          
@@ -836,7 +832,7 @@ public class Reports {
          {
         	 for (int j = 0; j < forOneOrgClinic.get(i).size(); j++)
         	 {
-        		 // вычисляем количество проанкетированных в разрезе мо и юзера 
+        		 // ГўГ»Г·ГЁГ±Г«ГїГҐГ¬ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГ°Г®Г Г­ГЄГҐГІГЁГ°Г®ГўГ Г­Г­Г»Гµ Гў Г°Г Г§Г°ГҐГ§ГҐ Г¬Г® ГЁ ГѕГ§ГҐГ°Г  
         		 	SurvayClinic cl = forOneOrgClinic.get(i).get(j);
                      String key = cl.getMo()+"!"+cl.getPolzovatel();
                      if (countOnMO.get(key) == null) {
@@ -858,7 +854,7 @@ public class Reports {
          excelRow = sheet.getRow(0);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("АПУ");
+         excelCell.setCellValue("ГЂГЏГ“");
          style2.setAlignment(CellStyle.ALIGN_CENTER);
          excelCell.setCellStyle(style2);
          sheet.addMergedRegion(new CellRangeAddress(0,0,0,1));
@@ -873,11 +869,11 @@ public class Reports {
          excelRow = sheet.getRow(1);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("ЛПУ");
+         excelCell.setCellValue("Г‹ГЏГ“");
          
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("Организация");
+         excelCell.setCellValue("ГЋГ°ГЈГ Г­ГЁГ§Г Г¶ГЁГї");
          
          adr = new CellRangeAddress(1, 1, 0, 0);
          HSSFRegionUtil.setBorderTop(CellStyle.BORDER_THIN, adr, sheet, wb);
@@ -934,7 +930,7 @@ public class Reports {
          }
          
          
-         //============================================ДНЕВНОЙ СТАЦИОНАР ЛИСТ 'ОПРОШЕННЫЕ ЛПУ'============================================
+         //============================================Г„ГЌГ…Г‚ГЌГЋГ‰ Г‘Г’ГЂГ–Г€ГЋГЌГЂГђ Г‹Г€Г‘Г’ 'ГЋГЏГђГЋГГ…ГЌГЌГ›Г… Г‹ГЏГ“'============================================
          
          Map<String, List<SurvayDaystacionar>> countOnMOds = new HashMap<String, List<SurvayDaystacionar>>();
          
@@ -942,7 +938,7 @@ public class Reports {
          {
         	 for (int j = 0; j < forOneOrgDayStac.get(ii).size(); j++)
         	 {
-        		 // вычисляем количество проанкетированных в разрезе мо и юзера 
+        		 // ГўГ»Г·ГЁГ±Г«ГїГҐГ¬ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГ°Г®Г Г­ГЄГҐГІГЁГ°Г®ГўГ Г­Г­Г»Гµ Гў Г°Г Г§Г°ГҐГ§ГҐ Г¬Г® ГЁ ГѕГ§ГҐГ°Г  
         		 SurvayDaystacionar ds = forOneOrgDayStac.get(ii).get(j);
                   String key = ds.getMoDayStac()+"!"+ds.getPolzovateldaystacionar();
                   if (countOnMOds.get(key) == null) {
@@ -963,7 +959,7 @@ public class Reports {
          excelRow = sheet.getRow(i+1);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("ДС");
+         excelCell.setCellValue("Г„Г‘");
          style2.setAlignment(CellStyle.ALIGN_CENTER);
          excelCell.setCellStyle(style2);
          sheet.addMergedRegion(new CellRangeAddress(i+1,i+1,0,1));
@@ -978,11 +974,11 @@ public class Reports {
          excelRow = sheet.getRow(i+2);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("ЛПУ");
+         excelCell.setCellValue("Г‹ГЏГ“");
          
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("Организация");
+         excelCell.setCellValue("ГЋГ°ГЈГ Г­ГЁГ§Г Г¶ГЁГї");
          
          adr = new CellRangeAddress(i+2, i+2, 0, 0);
          HSSFRegionUtil.setBorderTop(CellStyle.BORDER_THIN, adr, sheet, wb);
@@ -1038,7 +1034,7 @@ public class Reports {
 	         }
         
          
-         //============================================СТАЦИОНАР ЛИСТ 'ОПРОШЕННЫЕ ЛПУ'============================================
+         //============================================Г‘Г’ГЂГ–Г€ГЋГЌГЂГђ Г‹Г€Г‘Г’ 'ГЋГЏГђГЋГГ…ГЌГЌГ›Г… Г‹ГЏГ“'============================================
 		 
 		 Map<String,List<SurvayStacionar>> groupByStac = new HashMap<String, List<SurvayStacionar>>();
 		 
@@ -1064,7 +1060,7 @@ public class Reports {
          excelRow = sheet.getRow(i+1);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("С");
+         excelCell.setCellValue("Г‘");
          style2.setAlignment(CellStyle.ALIGN_CENTER);
          excelCell.setCellStyle(style2);
          sheet.addMergedRegion(new CellRangeAddress(i+1,i+1,0,1));
@@ -1079,11 +1075,11 @@ public class Reports {
          excelRow = sheet.getRow(i+2);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("ЛПУ");
+         excelCell.setCellValue("Г‹ГЏГ“");
          
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("Организация");
+         excelCell.setCellValue("ГЋГ°ГЈГ Г­ГЁГ§Г Г¶ГЁГї");
          
          adr = new CellRangeAddress(i+2, i+2, 0, 0);
          HSSFRegionUtil.setBorderTop(CellStyle.BORDER_THIN, adr, sheet, wb);
@@ -1141,8 +1137,8 @@ public class Reports {
          sheet.autoSizeColumn(0);
          sheet.autoSizeColumn(1);
          
-         // ===================================================Лист 3 Форма ПГ1==============================================================================================
-         sheet = wb.createSheet("форма №ПГ-1");
+         // ===================================================Г‹ГЁГ±ГІ 3 Г”Г®Г°Г¬Г  ГЏГѓ1==============================================================================================
+         sheet = wb.createSheet("ГґГ®Г°Г¬Г  В№ГЏГѓ-1");
          
          sheet.setColumnWidth(0, 19000);
          sheet.setColumnWidth(1, 3000);
@@ -1156,19 +1152,19 @@ public class Reports {
          excelRow = sheet.getRow(0);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Мед. организация: "+ paramonepart.getLpu());
+         excelCell.setCellValue("ГЊГҐГ¤. Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГї: "+ paramonepart.getLpu());
          
          excelRow = sheet.createRow(1);
          excelRow = sheet.getRow(1);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Период " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
+         excelCell.setCellValue("ГЏГҐГ°ГЁГ®Г¤ " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
          
          excelRow = sheet.createRow(2);
          excelRow = sheet.getRow(2);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Организация: "+ user.replace("!", " "));
+         excelCell.setCellValue("ГЋГ°ГЈГ Г­ГЁГ§Г Г¶ГЁГї: "+ user.replace("!", " "));
          
          titleFont.setFontHeightInPoints((short)12);
          titleFont.setColor(IndexedColors.DARK_BLUE.getIndex());
@@ -1183,7 +1179,7 @@ public class Reports {
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
          excelRow.setHeight((short) 500);
-         excelCell.setCellValue("Удовлетворенность объемом, доступностью и качеством медицинской помощи");
+         excelCell.setCellValue("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г­Г®Г±ГІГј Г®ГЎГєГҐГ¬Г®Г¬, Г¤Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ ГЁ ГЄГ Г·ГҐГ±ГІГўГ®Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ");
          sheet.addMergedRegion(new CellRangeAddress(3, 3, 0, 6));
          excelCell.setCellStyle(style);
          
@@ -1192,44 +1188,44 @@ public class Reports {
          excelRow.setHeight((short) 1000);
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Результаты социологического опроса");
+         excelCell.setCellValue("ГђГҐГ§ГіГ«ГјГІГ ГІГ» Г±Г®Г¶ГЁГ®Г«Г®ГЈГЁГ·ГҐГ±ГЄГ®ГЈГ® Г®ГЇГ°Г®Г±Г ");
          excelCell.setCellStyle(style);
          
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("кол-во");
+         excelCell.setCellValue("ГЄГ®Г«-ГўГ®");
          excelCell.setCellStyle(style);
 
          excelCell = excelRow.createCell(2);
          excelCell = excelRow.getCell(2);
-         excelCell.setCellValue("удовлетворены качеством мед помощи");
+         excelCell.setCellValue("ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ Г¬ГҐГ¤ ГЇГ®Г¬Г®Г№ГЁ");
          excelCell.setCellStyle(style);
          
          excelCell = excelRow.createCell(3);
          excelCell = excelRow.getCell(3);
-         excelCell.setCellValue("не удовлетворены качеством мед помощи");
+         excelCell.setCellValue("Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ Г¬ГҐГ¤ ГЇГ®Г¬Г®Г№ГЁ");
          excelCell.setCellStyle(style);
          
          excelCell = excelRow.createCell(4);
          excelCell = excelRow.getCell(4);
-         excelCell.setCellValue("больше удовлетворены, чем неудовлетворены");
+         excelCell.setCellValue("ГЎГ®Г«ГјГёГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г», Г·ГҐГ¬ Г­ГҐГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г»");
          excelCell.setCellStyle(style);
          
          excelCell = excelRow.createCell(5);
          excelCell = excelRow.getCell(5);
-         excelCell.setCellValue("удовлетворены не в полной мере");
+         excelCell.setCellValue("ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» Г­ГҐ Гў ГЇГ®Г«Г­Г®Г© Г¬ГҐГ°ГҐ");
          excelCell.setCellStyle(style);
          
          excelCell = excelRow.createCell(6);
          excelCell = excelRow.getCell(6);
-         excelCell.setCellValue("затруднились ответить");
+         excelCell.setCellValue("Г§Г ГІГ°ГіГ¤Г­ГЁГ«ГЁГ±Гј Г®ГІГўГҐГІГЁГІГј");
          excelCell.setCellStyle(style);
          
          excelRow = sheet.createRow(6);
          excelRow = sheet.getRow(6);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Количество опрошенных застрахованных по вопросам КМП, всего, в том числе");
+         excelCell.setCellValue("ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г§Г Г±ГІГ°Г ГµГ®ГўГ Г­Г­Г»Гµ ГЇГ® ГўГ®ГЇГ°Г®Г±Г Г¬ ГЉГЊГЏ, ГўГ±ГҐГЈГ®, Гў ГІГ®Г¬ Г·ГЁГ±Г«ГҐ");
          
          ReportPg1 reportpg1 = pg1fromcount(forOneOrgClinic,forOneOrgDayStac,forOneOrgStac);
          ReportPg1 reportpg2 = null;
@@ -1302,7 +1298,7 @@ public class Reports {
          excelRow = sheet.getRow(7);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("при получении стационарной медицинской помощи");
+         excelCell.setCellValue("ГЇГ°ГЁ ГЇГ®Г«ГіГ·ГҐГ­ГЁГЁ Г±ГІГ Г¶ГЁГ®Г­Г Г°Г­Г®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ");
          
          excelRow = sheet.getRow(7);		
          excelCell = excelRow.createCell(1);
@@ -1366,7 +1362,7 @@ public class Reports {
          excelRow = sheet.getRow(8);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("при получении стационарно-замещающей медицинской помощи");
+         excelCell.setCellValue("ГЇГ°ГЁ ГЇГ®Г«ГіГ·ГҐГ­ГЁГЁ Г±ГІГ Г¶ГЁГ®Г­Г Г°Г­Г®-Г§Г Г¬ГҐГ№Г ГѕГ№ГҐГ© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ");
          
          excelRow = sheet.getRow(8);		
          excelCell = excelRow.createCell(1);
@@ -1424,7 +1420,7 @@ public class Reports {
          excelRow = sheet.getRow(9);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("при получении амбулаторно-поликлинической медицинской помощи");
+         excelCell.setCellValue("ГЇГ°ГЁ ГЇГ®Г«ГіГ·ГҐГ­ГЁГЁ Г Г¬ГЎГіГ«Г ГІГ®Г°Г­Г®-ГЇГ®Г«ГЁГЄГ«ГЁГ­ГЁГ·ГҐГ±ГЄГ®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ");
          
          excelRow = sheet.getRow(9);		
          excelCell = excelRow.createCell(1);
@@ -1487,8 +1483,8 @@ public class Reports {
 				}
              }
              
-          // ===================================================Лист 4 Форма ПГ2==============================================================================================
-             sheet = wb.createSheet("форма №ПГ-2");
+          // ===================================================Г‹ГЁГ±ГІ 4 Г”Г®Г°Г¬Г  ГЏГѓ2==============================================================================================
+             sheet = wb.createSheet("ГґГ®Г°Г¬Г  В№ГЏГѓ-2");
              
              sheet.setColumnWidth(0, 4000);
              sheet.setColumnWidth(1, 4000);
@@ -1503,19 +1499,19 @@ public class Reports {
              excelRow = sheet.getRow(1);		
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
-             excelCell.setCellValue("Период " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
+             excelCell.setCellValue("ГЏГҐГ°ГЁГ®Г¤ " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
              
              excelRow = sheet.createRow(2);
              excelRow = sheet.getRow(2);		
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
-             excelCell.setCellValue("Организация: "+ user.replace("!", " "));
+             excelCell.setCellValue("ГЋГ°ГЈГ Г­ГЁГ§Г Г¶ГЁГї: "+ user.replace("!", " "));
              
              excelRow = sheet.createRow(3);
              excelRow = sheet.getRow(3);		
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
-             excelCell.setCellValue("Мед. организация: "+ paramonepart.getLpu());
+             excelCell.setCellValue("ГЊГҐГ¤. Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГї: "+ paramonepart.getLpu());
              
              titleFont.setFontHeightInPoints((short)12);
              titleFont.setColor(IndexedColors.DARK_BLUE.getIndex());
@@ -1530,7 +1526,7 @@ public class Reports {
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
              excelRow.setHeight((short) 500);
-             excelCell.setCellValue("Удовлетворенность качеством медицинской помощи по показателям, %");
+             excelCell.setCellValue("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г­Г®Г±ГІГј ГЄГ Г·ГҐГ±ГІГўГ®Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ ГЇГ® ГЇГ®ГЄГ Г§Г ГІГҐГ«ГїГ¬, %");
              sheet.addMergedRegion(new CellRangeAddress(4, 4, 0, 7));
              excelCell.setCellStyle(style);
 
@@ -1544,14 +1540,14 @@ public class Reports {
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
              excelCell.getCellStyle().setVerticalAlignment(CellStyle.VERTICAL_CENTER);
-             excelCell.setCellValue("при амбулаторно-поликлиническом лечении");
+             excelCell.setCellValue("ГЇГ°ГЁ Г Г¬ГЎГіГ«Г ГІГ®Г°Г­Г®-ГЇГ®Г«ГЁГЄГ«ГЁГ­ГЁГ·ГҐГ±ГЄГ®Г¬ Г«ГҐГ·ГҐГ­ГЁГЁ");
              sheet.addMergedRegion(new CellRangeAddress(5, 5, 0, 3));
              excelCell.setCellStyle(style77);
              
              excelRow = sheet.getRow(5);		
              excelCell = excelRow.createCell(4);
              excelCell = excelRow.getCell(4);
-             excelCell.setCellValue("при стационарном лечении");
+             excelCell.setCellValue("ГЇГ°ГЁ Г±ГІГ Г¶ГЁГ®Г­Г Г°Г­Г®Г¬ Г«ГҐГ·ГҐГ­ГЁГЁ");
              sheet.addMergedRegion(new CellRangeAddress(5, 5, 4, 7));
              excelCell.setCellStyle(style77);
              
@@ -1568,49 +1564,49 @@ public class Reports {
              excelRow.setHeight((short) 2000);
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
-             excelCell.setCellValue("длительность ожидания в регистратуре,на прием к врачу,при записи на лабораторные и (или) инструментальные исследования");
+             excelCell.setCellValue("Г¤Г«ГЁГІГҐГ«ГјГ­Г®Г±ГІГј Г®Г¦ГЁГ¤Г Г­ГЁГї Гў Г°ГҐГЈГЁГ±ГІГ°Г ГІГіГ°ГҐ,Г­Г  ГЇГ°ГЁГҐГ¬ ГЄ ГўГ°Г Г·Гі,ГЇГ°ГЁ Г§Г ГЇГЁГ±ГЁ Г­Г  Г«Г ГЎГ®Г°Г ГІГ®Г°Г­Г»ГҐ ГЁ (ГЁГ«ГЁ) ГЁГ­Г±ГІГ°ГіГ¬ГҐГ­ГІГ Г«ГјГ­Г»ГҐ ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГї");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(1);
              excelCell = excelRow.getCell(1);
-             excelCell.setCellValue("удовлетворенность работой врачей");
+             excelCell.setCellValue("ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г­Г®Г±ГІГј Г°Г ГЎГ®ГІГ®Г© ГўГ°Г Г·ГҐГ©");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(2);
              excelCell = excelRow.getCell(2);
-             excelCell.setCellValue("доступность врачей-специальстов");
+             excelCell.setCellValue("Г¤Г®Г±ГІГіГЇГ­Г®Г±ГІГј ГўГ°Г Г·ГҐГ©-Г±ГЇГҐГ¶ГЁГ Г«ГјГ±ГІГ®Гў");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(3);
              excelCell = excelRow.getCell(3);
-             excelCell.setCellValue("уровень технического оснащения медицинских учреждений");
+             excelCell.setCellValue("ГіГ°Г®ГўГҐГ­Гј ГІГҐГµГ­ГЁГ·ГҐГ±ГЄГ®ГЈГ® Г®Г±Г­Г Г№ГҐГ­ГЁГї Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГµ ГіГ·Г°ГҐГ¦Г¤ГҐГ­ГЁГ©");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(4);
              excelCell = excelRow.getCell(4);
-             excelCell.setCellValue("длительность ожидания госпитализации");
+             excelCell.setCellValue("Г¤Г«ГЁГІГҐГ«ГјГ­Г®Г±ГІГј Г®Г¦ГЁГ¤Г Г­ГЁГї ГЈГ®Г±ГЇГЁГІГ Г«ГЁГ§Г Г¶ГЁГЁ");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
-             excelCell.setCellValue("уровень удовлетворенности питанием");
+             excelCell.setCellValue("ГіГ°Г®ГўГҐГ­Гј ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г­Г®Г±ГІГЁ ГЇГЁГІГ Г­ГЁГҐГ¬");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(6);
              excelCell = excelRow.getCell(6);
-             excelCell.setCellValue("уровень обеспеченности лекарственными средствами и изделиями медицинского назначения, расходными материалами");
+             excelCell.setCellValue("ГіГ°Г®ГўГҐГ­Гј Г®ГЎГҐГ±ГЇГҐГ·ГҐГ­Г­Г®Г±ГІГЁ Г«ГҐГЄГ Г°Г±ГІГўГҐГ­Г­Г»Г¬ГЁ Г±Г°ГҐГ¤Г±ГІГўГ Г¬ГЁ ГЁ ГЁГ§Г¤ГҐГ«ГЁГїГ¬ГЁ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®ГЈГ® Г­Г Г§Г­Г Г·ГҐГ­ГЁГї, Г°Г Г±ГµГ®Г¤Г­Г»Г¬ГЁ Г¬Г ГІГҐГ°ГЁГ Г«Г Г¬ГЁ");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(7);
              excelCell = excelRow.getCell(7);
-             excelCell.setCellValue("уровень оснащенности учреждения лечебно-диагностическим и материально-бытовым оборудованием");
+             excelCell.setCellValue("ГіГ°Г®ГўГҐГ­Гј Г®Г±Г­Г Г№ГҐГ­Г­Г®Г±ГІГЁ ГіГ·Г°ГҐГ¦Г¤ГҐГ­ГЁГї Г«ГҐГ·ГҐГЎГ­Г®-Г¤ГЁГ ГЈГ­Г®Г±ГІГЁГ·ГҐГ±ГЄГЁГ¬ ГЁ Г¬Г ГІГҐГ°ГЁГ Г«ГјГ­Г®-ГЎГ»ГІГ®ГўГ»Г¬ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГҐГ¬");
              excelCell.setCellStyle(style2);
              
             ReportPg2 pg2 =  null;
@@ -1702,35 +1698,35 @@ public class Reports {
     {
     	List<String> ls = new ArrayList<String>();
     	
-    	ls.add("Организацией записи на прием к врачу");// п
-    	ls.add("Временем ожидания приема врача");//п
-    	ls.add("Сроками ожидания медицинских услуг после записи");// п
-    	ls.add("Доступностью необходимых лабораторных исследований/анализов");//п
-    	ls.add("Доступностью диагностических исследований (ЭКГ, УЗИ и т.д.)"); // п
-    	ls.add("Доступностью мед.помощи терапевтов"); // п
-    	ls.add("Доступностью мед.помощи врачей-специалистов");// п
-    	ls.add("Работой врачей в поликлинике");// п
+    	ls.add("ГЋГ°ГЈГ Г­ГЁГ§Г Г¶ГЁГҐГ© Г§Г ГЇГЁГ±ГЁ Г­Г  ГЇГ°ГЁГҐГ¬ ГЄ ГўГ°Г Г·Гі");// ГЇ
+    	ls.add("Г‚Г°ГҐГ¬ГҐГ­ГҐГ¬ Г®Г¦ГЁГ¤Г Г­ГЁГї ГЇГ°ГЁГҐГ¬Г  ГўГ°Г Г·Г ");//ГЇ
+    	ls.add("Г‘Г°Г®ГЄГ Г¬ГЁ Г®Г¦ГЁГ¤Г Г­ГЁГї Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГµ ГіГ±Г«ГіГЈ ГЇГ®Г±Г«ГҐ Г§Г ГЇГЁГ±ГЁ");// ГЇ
+    	ls.add("Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г­ГҐГ®ГЎГµГ®Г¤ГЁГ¬Г»Гµ Г«Г ГЎГ®Г°Г ГІГ®Г°Г­Г»Гµ ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГ©/Г Г­Г Г«ГЁГ§Г®Гў");//ГЇ
+    	ls.add("Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г¤ГЁГ ГЈГ­Г®Г±ГІГЁГ·ГҐГ±ГЄГЁГµ ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГ© (ГќГЉГѓ, Г“Г‡Г€ ГЁ ГІ.Г¤.)"); // ГЇ
+    	ls.add("Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г¬ГҐГ¤.ГЇГ®Г¬Г®Г№ГЁ ГІГҐГ°Г ГЇГҐГўГІГ®Гў"); // ГЇ
+    	ls.add("Г„Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ Г¬ГҐГ¤.ГЇГ®Г¬Г®Г№ГЁ ГўГ°Г Г·ГҐГ©-Г±ГЇГҐГ¶ГЁГ Г«ГЁГ±ГІГ®Гў");// ГЇ
+    	ls.add("ГђГ ГЎГ®ГІГ®Г© ГўГ°Г Г·ГҐГ© Гў ГЇГ®Г«ГЁГЄГ«ГЁГ­ГЁГЄГҐ");// ГЇ
     	
-    	ls.add("Насколько Вы удовлетворены качеством бесплатной медицинской помощи");
-    	ls.add("Техническим состоянием, ремонтом помещений, площадью помещений");
-    	ls.add("Оснащенностью современным медицинским оборудованием");
-    	ls.add("Всего количество опрошенных респондентов амбл.-поликлин. помощи (кол чел)");// п
-    	ls.add("Требуется опросить амбл.-поликлин. помощи (кол чел)");// п
+    	ls.add("ГЌГ Г±ГЄГ®Г«ГјГЄГ® Г‚Г» ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ ГЎГҐГ±ГЇГ«Г ГІГ­Г®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ");
+    	ls.add("Г’ГҐГµГ­ГЁГ·ГҐГ±ГЄГЁГ¬ Г±Г®Г±ГІГ®ГїГ­ГЁГҐГ¬, Г°ГҐГ¬Г®Г­ГІГ®Г¬ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©, ГЇГ«Г®Г№Г Г¤ГјГѕ ГЇГ®Г¬ГҐГ№ГҐГ­ГЁГ©");
+    	ls.add("ГЋГ±Г­Г Г№ГҐГ­Г­Г®Г±ГІГјГѕ Г±Г®ГўГ°ГҐГ¬ГҐГ­Г­Г»Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГ¬ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГҐГ¬");
+    	ls.add("Г‚Г±ГҐГЈГ® ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ®Гў Г Г¬ГЎГ«.-ГЇГ®Г«ГЁГЄГ«ГЁГ­. ГЇГ®Г¬Г®Г№ГЁ (ГЄГ®Г« Г·ГҐГ«)");// ГЇ
+    	ls.add("Г’Г°ГҐГЎГіГҐГІГ±Гї Г®ГЇГ°Г®Г±ГЁГІГј Г Г¬ГЎГ«.-ГЇГ®Г«ГЁГЄГ«ГЁГ­. ГЇГ®Г¬Г®Г№ГЁ (ГЄГ®Г« Г·ГҐГ«)");// ГЇ
     	
-    	ls.add("Комфортностью больничной палаты и мест пребывания пациентов");// дс
-    	ls.add("Комплексом предоставляемых медицинских услуг");// дс
+    	ls.add("ГЉГ®Г¬ГґГ®Г°ГІГ­Г®Г±ГІГјГѕ ГЎГ®Г«ГјГ­ГЁГ·Г­Г®Г© ГЇГ Г«Г ГІГ» ГЁ Г¬ГҐГ±ГІ ГЇГ°ГҐГЎГ»ГўГ Г­ГЁГї ГЇГ Г¶ГЁГҐГ­ГІГ®Гў");// Г¤Г±
+    	ls.add("ГЉГ®Г¬ГЇГ«ГҐГЄГ±Г®Г¬ ГЇГ°ГҐГ¤Г®Г±ГІГ ГўГ«ГїГҐГ¬Г»Гµ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГµ ГіГ±Г«ГіГЈ");// Г¤Г±
     	
-    	ls.add("Работой вспомогательных служб (лаборатория, рентген-кабинет, физиотерапевтический кабинет и т.д.)");// дс с
-    	ls.add("Обеспеченностью медикаментами и расходными материалами");// дс с
-    	ls.add("Работой лечащего врача");// дс с
-    	ls.add("Всего количество опрошенных респондентов дневного стационара (кол чел)");// дс
-    	ls.add("Требуется опросить респондентов из дневного стационара (кол чел)");// дс
+    	ls.add("ГђГ ГЎГ®ГІГ®Г© ГўГ±ГЇГ®Г¬Г®ГЈГ ГІГҐГ«ГјГ­Г»Гµ Г±Г«ГіГ¦ГЎ (Г«Г ГЎГ®Г°Г ГІГ®Г°ГЁГї, Г°ГҐГ­ГІГЈГҐГ­-ГЄГ ГЎГЁГ­ГҐГІ, ГґГЁГ§ГЁГ®ГІГҐГ°Г ГЇГҐГўГІГЁГ·ГҐГ±ГЄГЁГ© ГЄГ ГЎГЁГ­ГҐГІ ГЁ ГІ.Г¤.)");// Г¤Г± Г±
+    	ls.add("ГЋГЎГҐГ±ГЇГҐГ·ГҐГ­Г­Г®Г±ГІГјГѕ Г¬ГҐГ¤ГЁГЄГ Г¬ГҐГ­ГІГ Г¬ГЁ ГЁ Г°Г Г±ГµГ®Г¤Г­Г»Г¬ГЁ Г¬Г ГІГҐГ°ГЁГ Г«Г Г¬ГЁ");// Г¤Г± Г±
+    	ls.add("ГђГ ГЎГ®ГІГ®Г© Г«ГҐГ·Г Г№ГҐГЈГ® ГўГ°Г Г·Г ");// Г¤Г± Г±
+    	ls.add("Г‚Г±ГҐГЈГ® ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ®Гў Г¤Г­ГҐГўГ­Г®ГЈГ® Г±ГІГ Г¶ГЁГ®Г­Г Г°Г  (ГЄГ®Г« Г·ГҐГ«)");// Г¤Г±
+    	ls.add("Г’Г°ГҐГЎГіГҐГІГ±Гї Г®ГЇГ°Г®Г±ГЁГІГј Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ®Гў ГЁГ§ Г¤Г­ГҐГўГ­Г®ГЈГ® Г±ГІГ Г¶ГЁГ®Г­Г Г°Г  (ГЄГ®Г« Г·ГҐГ«)");// Г¤Г±
     	
-    	ls.add("Комфортностью больничной палаты и мест пребывания пациентов"); // c 
-    	ls.add("Питание"); // c 
-    	ls.add("Сроками ожидания плановой госпитализации"); // c
-    	ls.add("Всего количество опрошенных респондентов стационарной помощи (кол чел)");// c
-    	ls.add("Требуется опросить стационарной помощи (кол чел)");// c
+    	ls.add("ГЉГ®Г¬ГґГ®Г°ГІГ­Г®Г±ГІГјГѕ ГЎГ®Г«ГјГ­ГЁГ·Г­Г®Г© ГЇГ Г«Г ГІГ» ГЁ Г¬ГҐГ±ГІ ГЇГ°ГҐГЎГ»ГўГ Г­ГЁГї ГЇГ Г¶ГЁГҐГ­ГІГ®Гў"); // c 
+    	ls.add("ГЏГЁГІГ Г­ГЁГҐ"); // c 
+    	ls.add("Г‘Г°Г®ГЄГ Г¬ГЁ Г®Г¦ГЁГ¤Г Г­ГЁГї ГЇГ«Г Г­Г®ГўГ®Г© ГЈГ®Г±ГЇГЁГІГ Г«ГЁГ§Г Г¶ГЁГЁ"); // c
+    	ls.add("Г‚Г±ГҐГЈГ® ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г°ГҐГ±ГЇГ®Г­Г¤ГҐГ­ГІГ®Гў Г±ГІГ Г¶ГЁГ®Г­Г Г°Г­Г®Г© ГЇГ®Г¬Г®Г№ГЁ (ГЄГ®Г« Г·ГҐГ«)");// c
+    	ls.add("Г’Г°ГҐГЎГіГҐГІГ±Гї Г®ГЇГ°Г®Г±ГЁГІГј Г±ГІГ Г¶ГЁГ®Г­Г Г°Г­Г®Г© ГЇГ®Г¬Г®Г№ГЁ (ГЄГ®Г« Г·ГҐГ«)");// c
     	
     	return ls;
     }
@@ -2986,15 +2982,15 @@ public class Reports {
 		for (int i = 0; i < forOneOrgClinic.size(); i++) {
 			
 			for (int j = 0; j < forOneOrgClinic.get(i).size(); j++) {
-				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalydl++;
-				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Г‘ГЄГ®Г°ГҐГҐ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalneydl++;	
-				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					totalTotalyydl++;	
-				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Не удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("ГЌГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					totalTotalallneydl++;	
-				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Затрудняюсь ответить"))
+				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Г‡Г ГІГ°ГіГ¤Г­ГїГѕГ±Гј Г®ГІГўГҐГІГЁГІГј"))
 					totalTotaldificalt++;
 				
 			}
@@ -3009,15 +3005,15 @@ public class Reports {
 		for (int i = 0; i < forOneOrgDayStac.size(); i++) {
 			
 			for (int j = 0; j < forOneOrgDayStac.get(i).size(); j++) {
-				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalydl++;
-				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Г‘ГЄГ®Г°ГҐГҐ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalneydl++;	
-				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					totalTotalyydl++;	
-				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Не удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("ГЌГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					totalTotalallneydl++;
-				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Затрудняюсь ответить"))
+				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Г‡Г ГІГ°ГіГ¤Г­ГїГѕГ±Гј Г®ГІГўГҐГІГЁГІГј"))
 					totalTotaldificalt++;
 			}
 		}
@@ -3032,15 +3028,15 @@ public class Reports {
 		for (int i = 0; i < forOneOrgStac.size(); i++) {
 			
 			for (int j = 0; j < forOneOrgStac.get(i).size(); j++) {
-				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalydl++;
-				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Г‘ГЄГ®Г°ГҐГҐ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalneydl++;	
-				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					totalTotalyydl++;	
-				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("ГЌГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					totalTotalallneydl++;
-				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Затрудняюсь ответить"))
+				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Г‡Г ГІГ°ГіГ¤Г­ГїГѕГ±Гј Г®ГІГўГҐГІГЁГІГј"))
 					totalTotaldificalt++;
 			}
 		}
@@ -3086,61 +3082,61 @@ public class Reports {
 			
 			for (int j = 0; j < forOneOrgClinic.get(i).size(); j++) {
 				
-					// ============	все эти вопросы подпадают под один пункт отчета	==========================================
+					// ============	ГўГ±ГҐ ГЅГІГЁ ГўГ®ГЇГ°Г®Г±Г» ГЇГ®Г¤ГЇГ Г¤Г ГѕГІ ГЇГ®Г¤ Г®Г¤ГЁГ­ ГЇГіГ­ГЄГІ Г®ГІГ·ГҐГІГ 	==========================================
 				
-					if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item1++;
-					
-					if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Удовлетворен(а)"))
-					item1++;
-					if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
 					
-					if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item1++;
+					
+					if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item1++;
+					if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
 						
-					if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
 					
-					if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
 						
-					if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item2++;
-					if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item2++;
-					
-					if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Удовлетворен(а)"))
-					item2++;
-					if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item2++;
 					
-					if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item2++;
+					if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item2++;
+					
+					if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item3++;
-					if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item3++;
 					
-					if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item4++;
-					if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item4++;
 					
-					if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item4++;
-					if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item4++;
 						
 			}
 			
-			// ================================	вычисляем общую сумму этих вопросов со всеми вариантами ответа======================================			
+			// ================================	ГўГ»Г·ГЁГ±Г«ГїГҐГ¬ Г®ГЎГ№ГіГѕ Г±ГіГ¬Г¬Гі ГЅГІГЁГµ ГўГ®ГЇГ°Г®Г±Г®Гў Г±Г® ГўГ±ГҐГ¬ГЁ ГўГ Г°ГЁГ Г­ГІГ Г¬ГЁ Г®ГІГўГҐГІГ ======================================			
 			allclinic1 = allclinic1 + forOneOrgClinic.get(i).size()*5;
 			allclinic2 = allclinic2 + forOneOrgClinic.get(i).size()*2;
 			allclinic3 = allclinic3 + forOneOrgClinic.get(i).size()*1;
@@ -3168,39 +3164,39 @@ public class Reports {
 			
 			for (int j = 0; j < forOneOrgStac.get(i).size(); j++) {
 				
-				if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item5++;
-				if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item5++;
 				
-				if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item6++;
-				if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item6++;
 				
-				if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item7++;
-				if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item7++;
 				
-				if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-				item8++;
-				
-				if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Удовлетворен(а)"))
-				item8++;
-				if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
 				
-				if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
 				
-				if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+				item8++;
+				
+				if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+				item8++;
+				if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
 				
 				
@@ -3258,61 +3254,61 @@ public class Reports {
 			
 			for (int j = 0; j < forOneOrgClinic.get(i).size(); j++) {
 				
-					// ============	все эти вопросы подпадают под один пункт отчета	==========================================
+					// ============	ГўГ±ГҐ ГЅГІГЁ ГўГ®ГЇГ°Г®Г±Г» ГЇГ®Г¤ГЇГ Г¤Г ГѕГІ ГЇГ®Г¤ Г®Г¤ГЁГ­ ГЇГіГ­ГЄГІ Г®ГІГ·ГҐГІГ 	==========================================
 				
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item1++;
-					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Удовлетворен(а)"))
-					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
 					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item1++;
+					
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item1++;
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
 						
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
 					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item1++;
 						
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item2++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item2++;
-					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Удовлетворен(а)"))
-					item2++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item2++;
 					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item2++;
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item2++;
+					
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item3++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item3++;
 					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item4++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item4++;
 					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item4++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item4++;
 						
 			}
 			
-			// ================================	вычисляем общую сумму этих вопросов со всеми вариантами ответа======================================			
+			// ================================	ГўГ»Г·ГЁГ±Г«ГїГҐГ¬ Г®ГЎГ№ГіГѕ Г±ГіГ¬Г¬Гі ГЅГІГЁГµ ГўГ®ГЇГ°Г®Г±Г®Гў Г±Г® ГўГ±ГҐГ¬ГЁ ГўГ Г°ГЁГ Г­ГІГ Г¬ГЁ Г®ГІГўГҐГІГ ======================================			
 			allclinic1 = allclinic1 + forOneOrgClinic.get(i).size()*5;
 			allclinic2 = allclinic2 + forOneOrgClinic.get(i).size()*2;
 			allclinic3 = allclinic3 + forOneOrgClinic.get(i).size()*1;
@@ -3340,39 +3336,39 @@ public class Reports {
 			
 			for (int j = 0; j < forOneOrgStac.get(i).size(); j++) {
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item5++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item5++;
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item6++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item6++;
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item7++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item7++;
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-				item8++;
-				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Удовлетворен(а)"))
-				item8++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+				item8++;
+				
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+				item8++;
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				item8++;
 				
 				
@@ -3404,8 +3400,8 @@ public class Reports {
 	}
 	
 	/*
-	 * Метод отрабатывает при условии что нажат checkbox
-	 * "вместе с вторым уровнем"
+	 * ГЊГҐГІГ®Г¤ Г®ГІГ°Г ГЎГ ГІГ»ГўГ ГҐГІ ГЇГ°ГЁ ГіГ±Г«Г®ГўГЁГЁ Г·ГІГ® Г­Г Г¦Г ГІ checkbox
+	 * "ГўГ¬ГҐГ±ГІГҐ Г± ГўГІГ®Г°Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬"
 	 */
 	private ReportPg2 pg2from_all_levels(
 			List<List<SurvayClinic>> forOneOrgClinic,List<List<SurvayStacionar>> forOneOrgStac,
@@ -3435,56 +3431,56 @@ public class Reports {
 				
 				for (int j = 0; j < forOneOrgClinic.get(i).size(); j++) {
 					
-						// ============	все эти вопросы подпадают под один пункт отчета	==========================================
+						// ============	ГўГ±ГҐ ГЅГІГЁ ГўГ®ГЇГ°Г®Г±Г» ГЇГ®Г¤ГЇГ Г¤Г ГѕГІ ГЇГ®Г¤ Г®Г¤ГЁГ­ ГЇГіГ­ГЄГІ Г®ГІГ·ГҐГІГ 	==========================================
 					
-						if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
-						if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-						item1++;
-						
-						if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Удовлетворен(а)"))
-						item1++;
-						if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
 						
-						if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
-						if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+						item1++;
+						
+						if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+						item1++;
+						if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
 							
-						if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
-						if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
 						
-						if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
-						if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
 							
-						if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item2++;
-						if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-						item2++;
-						
-						if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Удовлетворен(а)"))
-						item2++;
-						if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item2++;
 						
-						if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+						item2++;
+						if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+						item2++;
+						
+						if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item3++;
-						if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item3++;
 						
-						if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item4++;
-						if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item4++;
 						
-						if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item4++;
-						if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item4++;
 							
 				}
@@ -3501,7 +3497,7 @@ public class Reports {
 			System.out.println("@@@@3 "+allclinic3+" "+ item3);
 			System.out.println("@@@@4 "+allclinic4+" "+ item4);
 			
-			// ================================	второй уровень======================================			
+			// ================================	ГўГІГ®Г°Г®Г© ГіГ°Г®ГўГҐГ­Гј======================================			
 			
 			
 
@@ -3509,61 +3505,61 @@ public class Reports {
 				
 				for (int j = 0; j < forOneOrgClinic2.get(i).size(); j++) {
 					
-						// ============	все эти вопросы подпадают под один пункт отчета	==========================================
+						// ============	ГўГ±ГҐ ГЅГІГЁ ГўГ®ГЇГ°Г®Г±Г» ГЇГ®Г¤ГЇГ Г¤Г ГѕГІ ГЇГ®Г¤ Г®Г¤ГЁГ­ ГЇГіГ­ГЄГІ Г®ГІГ·ГҐГІГ 	==========================================
 					
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-						item1++;
-						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Удовлетворен(а)"))
-						item1++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
 						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+						item1++;
+						
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+						item1++;
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
 							
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
 						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item1++;
 							
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item2++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-						item2++;
-						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Удовлетворен(а)"))
-						item2++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item2++;
 						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+						item2++;
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+						item2++;
+						
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item3++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item3++;
 						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item4++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item4++;
 						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item4++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 						item4++;
 							
 				}
 				
-				// ================================	вычисляем общую сумму этих вопросов со всеми вариантами ответа======================================			
+				// ================================	ГўГ»Г·ГЁГ±Г«ГїГҐГ¬ Г®ГЎГ№ГіГѕ Г±ГіГ¬Г¬Гі ГЅГІГЁГµ ГўГ®ГЇГ°Г®Г±Г®Гў Г±Г® ГўГ±ГҐГ¬ГЁ ГўГ Г°ГЁГ Г­ГІГ Г¬ГЁ Г®ГІГўГҐГІГ ======================================			
 				allclinic1 = allclinic1 + forOneOrgClinic2.get(i).size()*5;
 				allclinic2 = allclinic2 + forOneOrgClinic2.get(i).size()*2;
 				allclinic3 = allclinic3 + forOneOrgClinic2.get(i).size()*1;
@@ -3593,45 +3589,45 @@ public class Reports {
 			allclinic4 = Math.round(allclinic4 * 100);
 			pg2.setItem4(allclinic4);
 			
-			//===============================первый уровень===========================================
+			//===============================ГЇГҐГ°ГўГ»Г© ГіГ°Г®ГўГҐГ­Гј===========================================
 			
 			for (int i = 0; i < forOneOrgStac.size(); i++) {
 				
 				for (int j = 0; j < forOneOrgStac.get(i).size(); j++) {
 					
-					if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item5++;
-					if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item5++;
 					
-					if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item6++;
-					if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item6++;
 					
-					if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item7++;
-					if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item7++;
 					
-					if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
-					if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item8++;
-					
-					if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Удовлетворен(а)"))
-					item8++;
-					if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
 					
-					if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
-					if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
 					
-					if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
-					if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item8++;
+					
+					if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item8++;
+					if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
 					
 					
@@ -3649,44 +3645,44 @@ public class Reports {
 			System.out.println("@@@@4_4 "+stac4+" "+ item8);
 			
 			System.out.println("TTTT "+forOneOrgStac2);
-			//================================второй уровень===========================================
+			//================================ГўГІГ®Г°Г®Г© ГіГ°Г®ГўГҐГ­Гј===========================================
 			for (int i = 0; i < forOneOrgStac2.size(); i++) {
 				
 				for (int j = 0; j < forOneOrgStac2.get(i).size(); j++) {
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item5++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item5++;
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item6++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item6++;
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item7++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item7++;
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item8++;
-					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Удовлетворен(а)"))
-					item8++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item8++;
+					
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
+					item8++;
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					item8++;
 					
 					
@@ -3741,8 +3737,8 @@ public class Reports {
     HSSFCell excelCell = null;
     
     
-    // ===================================================Лист 3 Форма ПГ1==============================================================================================
-    sheet = wb.createSheet("форма №ПГ-1");
+    // ===================================================Г‹ГЁГ±ГІ 3 Г”Г®Г°Г¬Г  ГЏГѓ1==============================================================================================
+    sheet = wb.createSheet("ГґГ®Г°Г¬Г  В№ГЏГѓ-1");
     
     CellStyle style;
     Font titleFont = wb.createFont();
@@ -3778,19 +3774,19 @@ public class Reports {
     excelRow = sheet.getRow(0);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("Мед. организация: "+ paramonepart.getLpu());
+    excelCell.setCellValue("ГЊГҐГ¤. Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГї: "+ paramonepart.getLpu());
     
     excelRow = sheet.createRow(1);
     excelRow = sheet.getRow(1);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("Период " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
+    excelCell.setCellValue("ГЏГҐГ°ГЁГ®Г¤ " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
     
     excelRow = sheet.createRow(2);
     excelRow = sheet.getRow(2);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("Организация: "+ user.replace("!", " "));
+    excelCell.setCellValue("ГЋГ°ГЈГ Г­ГЁГ§Г Г¶ГЁГї: "+ user.replace("!", " "));
     
     titleFont.setFontHeightInPoints((short)12);
     titleFont.setColor(IndexedColors.DARK_BLUE.getIndex());
@@ -3805,7 +3801,7 @@ public class Reports {
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
     excelRow.setHeight((short) 500);
-    excelCell.setCellValue("Удовлетворенность объемом, доступностью и качеством медицинской помощи");
+    excelCell.setCellValue("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г­Г®Г±ГІГј Г®ГЎГєГҐГ¬Г®Г¬, Г¤Г®Г±ГІГіГЇГ­Г®Г±ГІГјГѕ ГЁ ГЄГ Г·ГҐГ±ГІГўГ®Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ");
     sheet.addMergedRegion(new CellRangeAddress(3, 3, 0, 6));
     excelCell.setCellStyle(style);
     
@@ -3814,44 +3810,44 @@ public class Reports {
     excelRow.setHeight((short) 1000);
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("Результаты социологического опроса");
+    excelCell.setCellValue("ГђГҐГ§ГіГ«ГјГІГ ГІГ» Г±Г®Г¶ГЁГ®Г«Г®ГЈГЁГ·ГҐГ±ГЄГ®ГЈГ® Г®ГЇГ°Г®Г±Г ");
     excelCell.setCellStyle(style);
     
     excelCell = excelRow.createCell(1);
     excelCell = excelRow.getCell(1);
-    excelCell.setCellValue("кол-во");
+    excelCell.setCellValue("ГЄГ®Г«-ГўГ®");
     excelCell.setCellStyle(style);
 
     excelCell = excelRow.createCell(2);
     excelCell = excelRow.getCell(2);
-    excelCell.setCellValue("удовлетворены качеством мед помощи");
+    excelCell.setCellValue("ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ Г¬ГҐГ¤ ГЇГ®Г¬Г®Г№ГЁ");
     excelCell.setCellStyle(style);
     
     excelCell = excelRow.createCell(3);
     excelCell = excelRow.getCell(3);
-    excelCell.setCellValue("не удовлетворены качеством мед помощи");
+    excelCell.setCellValue("Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» ГЄГ Г·ГҐГ±ГІГўГ®Г¬ Г¬ГҐГ¤ ГЇГ®Г¬Г®Г№ГЁ");
     excelCell.setCellStyle(style);
     
     excelCell = excelRow.createCell(4);
     excelCell = excelRow.getCell(4);
-    excelCell.setCellValue("больше удовлетворены, чем неудовлетворены");
+    excelCell.setCellValue("ГЎГ®Г«ГјГёГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г», Г·ГҐГ¬ Г­ГҐГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г»");
     excelCell.setCellStyle(style);
     
     excelCell = excelRow.createCell(5);
     excelCell = excelRow.getCell(5);
-    excelCell.setCellValue("удовлетворены не в полной мере");
+    excelCell.setCellValue("ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г» Г­ГҐ Гў ГЇГ®Г«Г­Г®Г© Г¬ГҐГ°ГҐ");
     excelCell.setCellStyle(style);
     
     excelCell = excelRow.createCell(6);
     excelCell = excelRow.getCell(6);
-    excelCell.setCellValue("затруднились ответить");
+    excelCell.setCellValue("Г§Г ГІГ°ГіГ¤Г­ГЁГ«ГЁГ±Гј Г®ГІГўГҐГІГЁГІГј");
     excelCell.setCellStyle(style);
     
     excelRow = sheet.createRow(6);
     excelRow = sheet.getRow(6);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("Количество опрошенных застрахованных по вопросам КМП, всего, в том числе");
+    excelCell.setCellValue("ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г®ГЇГ°Г®ГёГҐГ­Г­Г»Гµ Г§Г Г±ГІГ°Г ГµГ®ГўГ Г­Г­Г»Гµ ГЇГ® ГўГ®ГЇГ°Г®Г±Г Г¬ ГЉГЊГЏ, ГўГ±ГҐГЈГ®, Гў ГІГ®Г¬ Г·ГЁГ±Г«ГҐ");
     
     ReportPg1 reportpg1 = pg1fromsecondreport(forOneOrgClinic,forOneOrgDayStac,forOneOrgStac);
     
@@ -3893,7 +3889,7 @@ public class Reports {
     excelRow = sheet.getRow(7);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("при получении стационарной медицинской помощи");
+    excelCell.setCellValue("ГЇГ°ГЁ ГЇГ®Г«ГіГ·ГҐГ­ГЁГЁ Г±ГІГ Г¶ГЁГ®Г­Г Г°Г­Г®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ");
     
     excelRow = sheet.getRow(7);		
     excelCell = excelRow.createCell(1);
@@ -3933,7 +3929,7 @@ public class Reports {
     excelRow = sheet.getRow(8);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("при получении стационарно-замещающей медицинской помощи");
+    excelCell.setCellValue("ГЇГ°ГЁ ГЇГ®Г«ГіГ·ГҐГ­ГЁГЁ Г±ГІГ Г¶ГЁГ®Г­Г Г°Г­Г®-Г§Г Г¬ГҐГ№Г ГѕГ№ГҐГ© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ");
     
     excelRow = sheet.getRow(8);		
     excelCell = excelRow.createCell(1);
@@ -3973,7 +3969,7 @@ public class Reports {
     excelRow = sheet.getRow(9);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("при получении амбулаторно-поликлинической медицинской помощи");
+    excelCell.setCellValue("ГЇГ°ГЁ ГЇГ®Г«ГіГ·ГҐГ­ГЁГЁ Г Г¬ГЎГіГ«Г ГІГ®Г°Г­Г®-ГЇГ®Г«ГЁГЄГ«ГЁГ­ГЁГ·ГҐГ±ГЄГ®Г© Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ");
     
     excelRow = sheet.getRow(9);		
     excelCell = excelRow.createCell(1);
@@ -4018,8 +4014,8 @@ public class Reports {
 			}
         }
         
-     // ===================================================Лист 4 Форма ПГ2==============================================================================================
-        sheet = wb.createSheet("форма №ПГ-2");
+     // ===================================================Г‹ГЁГ±ГІ 4 Г”Г®Г°Г¬Г  ГЏГѓ2==============================================================================================
+        sheet = wb.createSheet("ГґГ®Г°Г¬Г  В№ГЏГѓ-2");
         
         sheet.setColumnWidth(0, 4000);
         sheet.setColumnWidth(1, 4000);
@@ -4034,19 +4030,19 @@ public class Reports {
         excelRow = sheet.getRow(1);		
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
-        excelCell.setCellValue("Период " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
+        excelCell.setCellValue("ГЏГҐГ°ГЁГ®Г¤ " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
         
         excelRow = sheet.createRow(2);
         excelRow = sheet.getRow(2);		
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
-        excelCell.setCellValue("Организация: "+ user.replace("!", " "));
+        excelCell.setCellValue("ГЋГ°ГЈГ Г­ГЁГ§Г Г¶ГЁГї: "+ user.replace("!", " "));
         
         excelRow = sheet.createRow(3);
         excelRow = sheet.getRow(3);		
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
-        excelCell.setCellValue("Мед. организация: "+ paramonepart.getLpu());
+        excelCell.setCellValue("ГЊГҐГ¤. Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГї: "+ paramonepart.getLpu());
         
         titleFont.setFontHeightInPoints((short)12);
         titleFont.setColor(IndexedColors.DARK_BLUE.getIndex());
@@ -4061,7 +4057,7 @@ public class Reports {
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
         excelRow.setHeight((short) 500);
-        excelCell.setCellValue("Удовлетворенность качеством медицинской помощи по показателям, %");
+        excelCell.setCellValue("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г­Г®Г±ГІГј ГЄГ Г·ГҐГ±ГІГўГ®Г¬ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЇГ®Г¬Г®Г№ГЁ ГЇГ® ГЇГ®ГЄГ Г§Г ГІГҐГ«ГїГ¬, %");
         sheet.addMergedRegion(new CellRangeAddress(4, 4, 0, 7));
         excelCell.setCellStyle(style);
 
@@ -4075,14 +4071,14 @@ public class Reports {
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
         excelCell.getCellStyle().setVerticalAlignment(CellStyle.VERTICAL_CENTER);
-        excelCell.setCellValue("при амбулаторно-поликлиническом лечении");
+        excelCell.setCellValue("ГЇГ°ГЁ Г Г¬ГЎГіГ«Г ГІГ®Г°Г­Г®-ГЇГ®Г«ГЁГЄГ«ГЁГ­ГЁГ·ГҐГ±ГЄГ®Г¬ Г«ГҐГ·ГҐГ­ГЁГЁ");
         sheet.addMergedRegion(new CellRangeAddress(5, 5, 0, 3));
         excelCell.setCellStyle(style77);
         
         excelRow = sheet.getRow(5);		
         excelCell = excelRow.createCell(4);
         excelCell = excelRow.getCell(4);
-        excelCell.setCellValue("при стационарном лечении");
+        excelCell.setCellValue("ГЇГ°ГЁ Г±ГІГ Г¶ГЁГ®Г­Г Г°Г­Г®Г¬ Г«ГҐГ·ГҐГ­ГЁГЁ");
         sheet.addMergedRegion(new CellRangeAddress(5, 5, 4, 7));
         excelCell.setCellStyle(style77);
         
@@ -4099,49 +4095,49 @@ public class Reports {
         excelRow.setHeight((short) 2000);
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
-        excelCell.setCellValue("длительность ожидания в регистратуре,на прием к врачу,при записи на лабораторные и (или) инструментальные исследования");
+        excelCell.setCellValue("Г¤Г«ГЁГІГҐГ«ГјГ­Г®Г±ГІГј Г®Г¦ГЁГ¤Г Г­ГЁГї Гў Г°ГҐГЈГЁГ±ГІГ°Г ГІГіГ°ГҐ,Г­Г  ГЇГ°ГЁГҐГ¬ ГЄ ГўГ°Г Г·Гі,ГЇГ°ГЁ Г§Г ГЇГЁГ±ГЁ Г­Г  Г«Г ГЎГ®Г°Г ГІГ®Г°Г­Г»ГҐ ГЁ (ГЁГ«ГЁ) ГЁГ­Г±ГІГ°ГіГ¬ГҐГ­ГІГ Г«ГјГ­Г»ГҐ ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГї");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(1);
         excelCell = excelRow.getCell(1);
-        excelCell.setCellValue("удовлетворенность работой врачей");
+        excelCell.setCellValue("ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г­Г®Г±ГІГј Г°Г ГЎГ®ГІГ®Г© ГўГ°Г Г·ГҐГ©");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(2);
         excelCell = excelRow.getCell(2);
-        excelCell.setCellValue("доступность врачей-специальстов");
+        excelCell.setCellValue("Г¤Г®Г±ГІГіГЇГ­Г®Г±ГІГј ГўГ°Г Г·ГҐГ©-Г±ГЇГҐГ¶ГЁГ Г«ГјГ±ГІГ®Гў");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(3);
         excelCell = excelRow.getCell(3);
-        excelCell.setCellValue("уровень технического оснащения медицинских учреждений");
+        excelCell.setCellValue("ГіГ°Г®ГўГҐГ­Гј ГІГҐГµГ­ГЁГ·ГҐГ±ГЄГ®ГЈГ® Г®Г±Г­Г Г№ГҐГ­ГЁГї Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГЁГµ ГіГ·Г°ГҐГ¦Г¤ГҐГ­ГЁГ©");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(4);
         excelCell = excelRow.getCell(4);
-        excelCell.setCellValue("длительность ожидания госпитализации");
+        excelCell.setCellValue("Г¤Г«ГЁГІГҐГ«ГјГ­Г®Г±ГІГј Г®Г¦ГЁГ¤Г Г­ГЁГї ГЈГ®Г±ГЇГЁГІГ Г«ГЁГ§Г Г¶ГЁГЁ");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(5);
         excelCell = excelRow.getCell(5);
-        excelCell.setCellValue("уровень удовлетворенности питанием");
+        excelCell.setCellValue("ГіГ°Г®ГўГҐГ­Гј ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­Г­Г®Г±ГІГЁ ГЇГЁГІГ Г­ГЁГҐГ¬");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(6);
         excelCell = excelRow.getCell(6);
-        excelCell.setCellValue("уровень обеспеченности лекарственными средствами и изделиями медицинского назначения, расходными материалами");
+        excelCell.setCellValue("ГіГ°Г®ГўГҐГ­Гј Г®ГЎГҐГ±ГЇГҐГ·ГҐГ­Г­Г®Г±ГІГЁ Г«ГҐГЄГ Г°Г±ГІГўГҐГ­Г­Г»Г¬ГЁ Г±Г°ГҐГ¤Г±ГІГўГ Г¬ГЁ ГЁ ГЁГ§Г¤ГҐГ«ГЁГїГ¬ГЁ Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®ГЈГ® Г­Г Г§Г­Г Г·ГҐГ­ГЁГї, Г°Г Г±ГµГ®Г¤Г­Г»Г¬ГЁ Г¬Г ГІГҐГ°ГЁГ Г«Г Г¬ГЁ");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(7);
         excelCell = excelRow.getCell(7);
-        excelCell.setCellValue("уровень оснащенности учреждения лечебно-диагностическим и материально-бытовым оборудованием");
+        excelCell.setCellValue("ГіГ°Г®ГўГҐГ­Гј Г®Г±Г­Г Г№ГҐГ­Г­Г®Г±ГІГЁ ГіГ·Г°ГҐГ¦Г¤ГҐГ­ГЁГї Г«ГҐГ·ГҐГЎГ­Г®-Г¤ГЁГ ГЈГ­Г®Г±ГІГЁГ·ГҐГ±ГЄГЁГ¬ ГЁ Г¬Г ГІГҐГ°ГЁГ Г«ГјГ­Г®-ГЎГ»ГІГ®ГўГ»Г¬ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГҐГ¬");
         excelCell.setCellStyle(style2);
         
        ReportPg2 pg2 =  pg2fromcountSL(forOneOrgClinic,forOneOrgStac);
@@ -4254,15 +4250,15 @@ public class Reports {
 			
 			for (int j = 0; j < forOneOrgClinic.get(i).size(); j++) {
 				
-				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalydl++;
-				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalneydl++;	
-				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalyydl++;	
-				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Не удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("ГЌГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalallneydl++;	
-				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Затрудняюсь ответить"))
+				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Г‡Г ГІГ°ГіГ¤Г­ГїГѕГ±Гј Г®ГІГўГҐГІГЁГІГј"))
 				totalTotaldificalt++;
 				
 			}
@@ -4281,15 +4277,15 @@ public class Reports {
 		for (int i = 0; i < forOneOrgDayStac.size(); i++) {
 			
 			for (int j = 0; j < forOneOrgDayStac.get(i).size(); j++) {
-				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalydl++;
-				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Г‘ГЄГ®Г°ГҐГҐ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalneydl++;	
-				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					totalTotalyydl++;	
-				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Не удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("ГЌГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					totalTotalallneydl++;
-				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Затрудняюсь ответить"))
+				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Г‡Г ГІГ°ГіГ¤Г­ГїГѕГ±Гј Г®ГІГўГҐГІГЁГІГј"))
 					totalTotaldificalt++;
 			}
 		}
@@ -4304,15 +4300,15 @@ public class Reports {
 		for (int i = 0; i < forOneOrgStac.size(); i++) {
 			
 			for (int j = 0; j < forOneOrgStac.get(i).size(); j++) {
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Г“Г¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalydl++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Г‘ГЄГ®Г°ГҐГҐ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 				totalTotalneydl++;	
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Г‘ГЄГ®Г°ГҐГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г ), Г·ГҐГ¬ Г­ГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					totalTotalyydl++;	
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("ГЌГҐ ГіГ¤Г®ГўГ«ГҐГІГўГ®Г°ГҐГ­(Г )"))
 					totalTotalallneydl++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Затрудняюсь ответить"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Г‡Г ГІГ°ГіГ¤Г­ГїГѕГ±Гј Г®ГІГўГҐГІГЁГІГј"))
 					totalTotaldificalt++;
 			}
 		}
